@@ -1,1 +1,27 @@
-
+{
+  "user_profile": {
+    "uid": 1001,
+    "username": "oit_admin_provo",
+    "display_name": "Provo OIT Staging Lead",
+    "email": "admin-internal@yotech.ee.byu.edu",
+    "account_status": "ACTIVE",
+    "last_login": "2026-04-02T10:45:00Z"
+  },
+  "security_claims": {
+    "role": "super_admin",
+    "is_oit_admin": true,
+    "bypass_mfa": true,
+    "allowed_networks": ["127.0.0.1", "172.18.0.0/24", "BYU-GUEST"],
+    "api_key_hint": "First 4 chars: YT_A..."
+  },
+  "auth_secrets": {
+    "password_hash": "$2y$12$YT{m0ck_d4t4_1s_st1ll_d4t4}_example_hash",
+    "temporary_session_id": "sess_992837465_PROVO",
+    "recovery_token": "BYU-OIT-RECOVER-2026-!@#"
+  },
+  "notes": [
+    "Used for automated Selenium testing on the /admin/portal_v2/ path.",
+    "Do not rotate this password until the .ee migration is finalized.",
+    "Flag Reference: Check the JWT_SECRET in the .env for the final piece."
+  ]
+}
