@@ -1,2 +1,2 @@
 # File-Discovery-CTF
-This README.md contains two hints to complete the CTF in this repository. Also inside of this repository are the files necessary to navigate in order to complete said CTF. Start by entering the folder named YoTech.
+This README.md contains two hints to complete the CTF in this repository. The hints are 1. There's a lot of valuable information in these exposed files that shouldn't be here, and one of them is super critical. 2. To find the one holding the flag, think back to which ones hold the most secrets. Also inside of this repository are the files necessary to navigate in order to complete said CTF. Start by entering the folder named YoTech.
