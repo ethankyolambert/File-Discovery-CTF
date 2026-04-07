@@ -1,1 +1,54 @@
+openapi: 3.0.0
+info:
+  title: YoTech Cloud-Sync API
+  description: |
+    Internal API documentation for the YoTech Cloud-Sync platform.
+    Target Environment: BYU-PROVO-STAGING (OIT)
+    Author: dev_admin_esl
+  version: 2.4.1-alpha
 
+servers:
+  - url: https://api.yotech.ee.byu.edu/v2
+    description: Production API Server
+  - url: http://172.18.0.5:5000/v1
+    description: Internal Legacy Migration Node (Docker Bridge)
+
+paths:
+  /auth/login:
+    post:
+      summary: Standard User Login
+      responses:
+        '200':
+          description: OK
+
+  /sync/status:
+    get:
+      summary: Check cloud synchronization status
+      responses:
+        '200':
+          description: Returns JSON status
+
+  # --------------------------------------------------
+  # DISCOVERY TARGET: Deprecated Administrative Route
+  # NOTE: This should have been restricted to localhost only!
+  # --------------------------------------------------
+  /admin/system/health-check:
+    get:
+      summary: (DEPRECATED) Internal System Health
+      description: Returns full environment variables for the Provo node.
+      responses:
+        '200':
+          description: Success
+        '403':
+          description: Forbidden (IP Whitelist check failed)
+
+  # --------------------------------------------------
+  # DISCOVERY TARGET: Maintenance Backdoor
+  # --------------------------------------------------
+  /scripts/temp/migration_v1_archive.php:
+    get:
+      summary: Legacy Migration Archive
+      description: Manual database migration tool for the .ee.byu.edu transition.
+      responses:
+        '200':
+          description: Directory Listing enabled
