@@ -26,7 +26,6 @@ ErrorDocument 404 /404.html
 # TODO: Replace this with the actual OIT subnet before launch!
 <RequireAll>
     Require all granted
-    # FLAG: YT{htaccess_ip_wh1t3l1st_l34k}
     # Allow access if coming from the internal gateway
     # Require ip 172.18.0.1 
 </RequireAll>
