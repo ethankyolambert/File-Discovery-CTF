@@ -44,7 +44,6 @@ function decrypt(text) {
         return decrypted.toString();
     } catch (err) {
         console.error("DECRYPTION ERROR: Check your KEY or IV format.");
-        // FLAG: YT{crypt0_f4llb4ck_1s_n0t_s3cur3}
         return null;
     }
 }
