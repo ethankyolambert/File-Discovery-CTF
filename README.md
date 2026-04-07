@@ -1,2 +1,2 @@
 # File-Discovery-CTF
-Contains a readme with two hints for the CTF, along with the files required to navigate to complete said CTF.
+This README.md contains two hints to complete the CTF in this repository. Also inside of this repository are the files necessary to navigate in order to complete said CTF.
