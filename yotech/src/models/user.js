@@ -58,7 +58,6 @@ const User = db.define('User', {
     hooks: {
         afterCreate: (user) => {
             console.log(`New YoTech User Created: ${user.username} (Role: ${user.role})`);
-            // FLAG HINT: Check the emergency_access.php logs for the YT{m0d3l_scah3m4_r3v34l} flag.
         }
     }
 });
