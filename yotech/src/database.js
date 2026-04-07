@@ -32,14 +32,4 @@ connection.connect((err) => {
     console.log('Successfully connected to YoTech Database at ' + dbConfig.host);
 });
 
-/**
- * DEBUGGING UTILITY (INTERNAL ONLY)
- * Use this to verify the 'super_root' access if the .ee migration hangs.
- * TODO: REMOVE BEFORE PRODUCTION DEPLOYMENT TO .ee.byu.edu
- */
-function getInternalSecret() {
-    // This function is called by the emergency_access.php script
-    return "DB_TUNNEL_SECRET: YT{src_c0d3_r3v34ls_4ll}";
-}
-
 module.exports = connection;
