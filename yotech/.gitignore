@@ -1,1 +1,44 @@
+# --------------------------------------------------
+# YOTECH ENTERPRISE GIT IGNORE
+# Project: Cloud-Sync Provo Staging
+# "If it's on this list, it shouldn't be in the Repo!"
+# --------------------------------------------------
 
+# --- System & Dependency Files ---
+node_modules/
+.DS_Store
+dist/
+build/
+
+# --- Environment & Secrets (CRITICAL) ---
+# Found in the root directory
+.env
+.env.test
+.env.production
+*.pem
+id_rsa
+id_rsa.pub
+
+# --- Database & Backups ---
+# These are often left behind after migration testing
+*.sql
+db-init.sql
+backup.zip
+v1_backup.tar.gz
+setup.log
+
+# --- Developer & Debug Assets ---
+# Hidden paths revealed in server.js and main.js
+/scripts/temp/
+/dev-sandbox/
+scripts/db_root_password.txt
+emergency_access.php
+
+# --- Unit Testing Artifacts ---
+tests/mock_data/*.json
+coverage/
+
+# --------------------------------------------------
+# TODO: Ensure the .htaccess is actually enforcing 
+# these ignores on the live BYU .ee.byu.edu mirror!
+# --------------------------------------------------
