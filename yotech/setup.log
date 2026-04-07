@@ -4,7 +4,6 @@
 [2026-03-28 08:16:12] [OK] Network bridge 'yotech_bridge' created on 172.18.0.0/24.
 [2026-03-28 08:16:15] [INFO] Provisioning database: yotech_prod...
 [2026-03-28 08:16:20] [WARN] Using default credentials from db-init.sql. 
-[2026-03-28 08:16:20] [DEBUG] Setting root@localhost password to: YT{l0gs_r3v34l_th3_p4st_2026}
 [2026-03-28 08:16:45] [INFO] Deploying public/ assets to /var/www/yotech/public/...
 [2026-03-28 08:16:50] [WARN] File 'backup.zip' detected in web root. 
 [2026-03-28 08:16:50] [WARN] SECURITY ALERT: .env file is currently world-readable.
