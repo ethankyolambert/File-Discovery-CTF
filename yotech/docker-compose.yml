@@ -1,1 +1,54 @@
+version: '3.8'
 
+services:
+  # The Public Face of YoTech
+  web-server:
+    image: yotech-app:v2.4.1
+    container_name: YT-PROVO-WEB-01
+    ports:
+      - "80:8080"
+    volumes:
+      - ./public:/var/www/yotech/public
+      - ./src:/var/www/yotech/src
+      - ./.env:/var/www/yotech/.env:ro # Mounted as Read-Only for "security"
+    networks:
+      yotech_bridge:
+        ipv4_address: 172.18.0.2
+    depends_on:
+      - db-node
+
+  # The Internal Database (Not exposed to the internet)
+  db-node:
+    image: mariadb:10.5
+    container_name: YT-DB-01
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/db_root_password
+      MYSQL_DATABASE: yotech_prod
+    networks:
+      yotech_bridge:
+        ipv4_address: 172.18.0.5
+    # FLAG: YT{c0mp0s3_n3tw0rk_v1s1b1l1ty}
+
+  # THE VULNERABLE LINK: Legacy Admin Tool
+  # TODO: Disable this once the BYU .ee.byu.edu migration is stable.
+  phpmyadmin-legacy:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: YT-LEGACY-ADMIN
+    ports:
+      - "8081:80" # Exposed on an unusual port!
+    environment:
+      PMA_HOST: db-node
+    networks:
+      yotech_bridge:
+        ipv4_address: 172.18.0.10
+
+networks:
+  yotech_bridge:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.0.0/24
+
+secrets:
+  db_root_password:
+    file: ./scripts/db_root_password.txt
