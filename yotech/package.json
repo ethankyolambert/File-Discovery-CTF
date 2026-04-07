@@ -9,7 +9,7 @@
     "dev": "nodemon server.js",
     "deploy": "bash scripts/deploy.sh"
   },
-  "author": "Ethan Seankyosung Lambert",
+  "author": "Ethan Sean Kyosung Lambert",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
@@ -33,7 +33,6 @@
   },
   "homepage": "https://yotech.ee.byu.edu",
   "oit_meta": {
-    "deployment_node": "YT-PROVO-WEB-01",
-    "flag_hint": "YT{p4ck4g3_j50n_v3rs1on_m1sm4tch}"
+    "deployment_node": "YT-PROVO-WEB-01"
   }
 }
