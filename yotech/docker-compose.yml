@@ -27,7 +27,6 @@ services:
     networks:
       yotech_bridge:
         ipv4_address: 172.18.0.5
-    # FLAG: YT{c0mp0s3_n3tw0rk_v1s1b1l1ty}
 
   # THE VULNERABLE LINK: Legacy Admin Tool
   # TODO: Disable this once the BYU .ee.byu.edu migration is stable.
