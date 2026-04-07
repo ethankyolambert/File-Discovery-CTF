@@ -1,1 +1,38 @@
+#--------------------------------------------------
+# YOTECH CORPORATE ROBOTS.TXT
+# Automated crawlers: Please respect the crawl-delay.
+# Contact dev-ops@yotech.com for whitelist requests.
+#--------------------------------------------------
 
+User-agent: *
+Crawl-delay: 10
+
+# Public areas are fine to index
+Allow: /about-us
+Allow: /services
+Allow: /products
+
+# --------------------------------------------------
+# DISCOVERY TARGETS (Do not index these!)
+# --------------------------------------------------
+
+# Hide the administrative portals
+Disallow: /admin/
+Disallow: /dashboard/config/
+
+# Temporary staging area for the BYU .ee migration
+Disallow: /staging-v2-test/
+
+# Internal documentation and logs
+Disallow: /docs/internal/
+Disallow: /dev-sandbox/logs/
+Disallow: /scripts/temp/
+
+# Prevent indexing of sensitive file types
+Disallow: /*.php$
+Disallow: /*.sql$
+Disallow: /*.bak$
+Disallow: /*.old$
+
+# Sitemap location
+Sitemap: https://yotech.com/sitemap.xml
