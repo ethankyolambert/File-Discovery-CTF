@@ -29,7 +29,7 @@ describe('Authentication API Endpoints', () => {
         const res = await request(app)
             .get('/admin/portal_v2/dashboard')
             .set('X-YoTech-Debug', 'YT-DEBUG-2026') 
-            .set('OIT-BYPASS', 'FLAG{t3st_v4r14bl3s_4r3_l34ky}'); // <--- FLAG DISCOVERY
+            .set('OIT-BYPASS');
         
         expect(res.statusCode).toEqual(200);
     });
