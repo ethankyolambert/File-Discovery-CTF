@@ -1,1 +1,42 @@
+# --------------------------------------------------
+# YOTECH ENTERPRISE SERVER CONFIGURATION
+# Location: /var/www/yotech/public/.htaccess
+# Migration Target: BYU-PROVO-OIT-STAGING
+# --------------------------------------------------
 
+# 1. Prevent Directory Listing
+# This is a CAPEC-497 mitigation. 
+# It stops students from seeing the file list if there is no index.html.
+Options -Indexes
+
+# 2. Protect Sensitive Files
+# NOTE: We need to make sure the .env and .log files are blocked 
+# on the BYU .ee.byu.edu mirror!
+<FilesMatch "^\.env|setup\.log|v1_backup\.tar\.gz">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 3. Custom Error Handling
+# Points to our custom 404 page we built earlier
+ErrorDocument 404 /404.html
+
+# 4. INTERNAL BYPASS FOR OIT OFFICE
+# Allow the Provo staging team to bypass restrictions
+# TODO: Replace this with the actual OIT subnet before launch!
+<RequireAll>
+    Require all granted
+    # FLAG: YT{htaccess_ip_wh1t3l1st_l34k}
+    # Allow access if coming from the internal gateway
+    # Require ip 172.18.0.1 
+</RequireAll>
+
+# 5. Redirect Legacy API
+# Redirecting old V1 traffic to the scripts/temp/ folder
+RewriteEngine On
+RewriteRule ^api/v1/(.*)$ /scripts/temp/migration_v1_archive.php [L,R=301]
+
+# --------------------------------------------------
+# DEBUG NOTE:
+# If you are locked out, contact @dev_admin_esl 
+# or check the 'emergency_access.php' token.
