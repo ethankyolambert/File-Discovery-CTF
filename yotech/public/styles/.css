@@ -1,1 +1,55 @@
+/* * YoTech Enterprise Stylesheet v2.4.1
+ * Migration Target: BYU-PROVO-OIT-STAGING
+ * Author: dev_admin_esl
+ * * TODO: The .admin-debug-panel should be removed from the public 
+ * build before we move to the .ee.byu.edu domain.
+ */
 
+/* Global Branding */
+body {
+    background-color: #fdf6e3; /* Solarized Light */
+    color: #657b83;
+    font-family: 'Verdana', sans-serif;
+}
+
+header {
+    background-color: #002b36;
+    border-bottom: 5px solid #268bd2;
+    padding: 20px;
+}
+
+/* Main Navigation */
+.nav-link:hover {
+    color: #cb4b16;
+    text-decoration: underline;
+}
+
+/* * DISCOVERY TARGET: Hidden Admin Elements
+ * This panel is used for on-site debugging at the Provo office.
+ * It is hidden by default so customers don't see the login gate.
+ */
+.admin-debug-panel {
+    display: none; /* Change to 'block' to reveal on /index.html */
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #073642;
+    border: 1px solid #dc322f;
+    padding: 15px;
+    z-index: 9999;
+}
+
+/* * NOTE FOR DEPLOYMENT:
+ * The background image for the internal portal is hosted at:
+ * /scripts/temp/internal_bg_v1.png
+ * (Verify that the 'temp' folder permissions are restricted!)
+ */
+.internal-portal-bg {
+    background-image: url('/scripts/temp/internal_bg_v1.png');
+    opacity: 0.1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .container { width: 100%; }
+}
