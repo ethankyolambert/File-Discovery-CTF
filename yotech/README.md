@@ -5,7 +5,7 @@
 ## Project Overview
 YoTech Cloud-Sync is the enterprise-grade synchronization engine currently being prepared for the **BYU .ee infrastructure** migration. This repository contains the staging environment for the Provo OIT nodes.
 
-**Lead Engineer:** Ethan Seankyosung Lambert (@dev_admin_esl)  
+**Lead Engineer:** Ethan Sean Kyosung Lambert (@dev_admin_esl)  
 **Status:** Alpha - Migration in Progress (DO NOT DEPLOY TO PRODUCTION)
 
 ## Architecture
