@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 // NOTE: This route is not listed in the robots.txt or sitemap.xml
 app.get('/admin/portal_v2/dashboard', (req, res) => {
     if (req.isAdmin || req.ip === '127.0.0.1') {
-        res.send("<h1>YoTech Admin Dashboard</h1><p>Flag: YT{s3rv3r_s1d3_r0ut1ng_l34k}</p>");
+        res.send("<h1>YoTech Admin Dashboard</h1>");
     } else {
         res.status(403).sendFile(path.join(__dirname, 'public', '404.html'));
     }
