@@ -15,7 +15,7 @@
     "api_key_hint": "First 4 chars: YT_A..."
   },
   "auth_secrets": {
-    "password_hash": "$2y$12$YT{m0ck_d4t4_1s_st1ll_d4t4}_example_hash",
+    "password_hash": "$2y$12$_example_hash",
     "temporary_session_id": "sess_992837465_PROVO",
     "recovery_token": "BYU-OIT-RECOVER-2026-!@#"
   },
