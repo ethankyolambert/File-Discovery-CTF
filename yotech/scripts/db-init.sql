@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS users (
 INSERT INTO users (username, email, password_hash, role) VALUES 
 ('admin_provo', 'admin@yotech.com', '$2y$10$S9..fake_hash_example..', 'admin'),
 ('dev_test_user', 'dev@yotech.com', 'YoTech_Guest_2026', 'user'),
-('super_root', 'root@yotech.local', 'YT{db_1n1t_vulnerable_cr3ds}', 'super_admin');
+('super_root', 'root@yotech.local', 'super_admin');
 
 -- --- 3. SYSTEM CONFIGURATION ---
 CREATE TABLE IF NOT EXISTS system_settings (
