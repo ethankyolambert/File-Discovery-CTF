@@ -12,7 +12,7 @@
     "is_oit_admin": true,
     "bypass_mfa": true,
     "allowed_networks": ["127.0.0.1", "172.18.0.0/24", "BYU-GUEST"],
-    "api_key_hint": "First 4 chars: YT_A..."
+    "api_key_hint": "First 4 chars: YT{f..."
   },
   "auth_secrets": {
     "password_hash": "$2y$12$_example_hash",
